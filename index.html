@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sai Srayash Jeejula — Data Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">[</span>SSJ<span class="logo-bracket">]</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about" data-text="ABOUT">ABOUT</a></li>
+      <li><a href="#skills" data-text="SKILLS">SKILLS</a></li>
+      <li><a href="#experience" data-text="EXPERIENCE">EXPERIENCE</a></li>
+      <li><a href="#projects" data-text="PROJECTS">PROJECTS</a></li>
+      <li><a href="#contact" data-text="CONTACT">CONTACT</a></li>
+    </ul>
+    <a href="mailto:saisrayash@gmail.com" class="nav-cta">HIRE ME</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-grid-lines"></div>
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="blink-dot"></span>
+        AVAILABLE FOR OPPORTUNITIES
+      </div>
+      <h1 class="hero-name">
+        <span class="name-line" data-delay="0">SAI</span>
+        <span class="name-line accent-line" data-delay="100">SRAYASH</span>
+        <span class="name-line" data-delay="200">JEEJULA</span>
+      </h1>
+      <div class="hero-role-wrapper">
+        <span class="role-label">// </span>
+        <span class="hero-role" id="typedRole"></span>
+        <span class="cursor-blink">_</span>
+      </div>
+      <p class="hero-summary">
+        4+ years engineering scalable data pipelines, real-time streaming architectures, 
+        and cloud platforms across <strong>Azure · AWS · GCP</strong>.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num" data-count="10">0</span><span class="stat-suffix">M+</span>
+          <span class="stat-label">Records / Day</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="4">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Years XP</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="3">0</span><span class="stat-suffix"></span>
+          <span class="stat-label">Cloud Platforms</span>
+        </div>
+      </div>
+      <div class="hero-cta-group">
+        <a href="#experience" class="btn-primary">VIEW WORK</a>
+        <a href="#contact" class="btn-outline">GET IN TOUCH</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="pipeline-diagram" id="pipelineDiagram">
+        <div class="pipe-node source" style="--delay:0s">
+          <div class="node-icon">⬡</div>
+          <span>SOURCE</span>
+        </div>
+        <div class="pipe-connector">
+          <div class="pipe-line"></div>
+          <div class="data-packet" style="--d:0.2s"></div>
+          <div class="data-packet" style="--d:0.7s"></div>
+          <div class="data-packet" style="--d:1.3s"></div>
+        </div>
+        <div class="pipe-node process" style="--delay:0.2s">
+          <div class="node-icon">⚙</div>
+          <span>TRANSFORM</span>
+        </div>
+        <div class="pipe-connector">
+          <div class="pipe-line"></div>
+          <div class="data-packet" style="--d:0.4s"></div>
+          <div class="data-packet" style="--d:0.9s"></div>
+          <div class="data-packet" style="--d:1.6s"></div>
+        </div>
+        <div class="pipe-node load" style="--delay:0.4s">
+          <div class="node-icon">◈</div>
+          <span>LOAD</span>
+        </div>
+        <div class="pipe-connector">
+          <div class="pipe-line"></div>
+          <div class="data-packet" style="--d:0.6s"></div>
+          <div class="data-packet" style="--d:1.1s"></div>
+          <div class="data-packet" style="--d:1.8s"></div>
+        </div>
+        <div class="pipe-node output" style="--delay:0.6s">
+          <div class="node-icon">▦</div>
+          <span>INSIGHTS</span>
+        </div>
+      </div>
+      <div class="code-terminal">
+        <div class="terminal-bar">
+          <span class="t-dot r"></span>
+          <span class="t-dot y"></span>
+          <span class="t-dot g"></span>
+          <span class="t-title">pipeline.py</span>
+        </div>
+        <pre class="terminal-body" id="terminalCode"></pre>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-index">01</span>
+        <h2 class="section-title">ABOUT</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-lead">
+            I build the invisible infrastructure that powers data-driven decisions — 
+            from ingestion to insight, at scale.
+          </p>
+          <p>
+            As a Data Engineer and Analytics Engineer with 4+ years of experience, 
+            I specialize in designing end-to-end ETL/ELT workflows, real-time streaming 
+            architectures, and cloud-native data platforms. My work spans B2B, enterprise 
+            analytics, and ML-integrated pipelines that process millions of records daily.
+          </p>
+          <p>
+            Currently pursuing my M.S. in Data Science & Analytics at SUNY Polytechnic 
+            Institute, while serving as a Graduate Assistant building scalable academic 
+            data infrastructure.
+          </p>
+          <div class="about-tags">
+            <span class="tag">Python</span>
+            <span class="tag">PySpark</span>
+            <span class="tag">Snowflake</span>
+            <span class="tag">Azure</span>
+            <span class="tag">Kafka</span>
+            <span class="tag">dbt</span>
+            <span class="tag">Airflow</span>
+            <span class="tag">Power BI</span>
+          </div>
+        </div>
+        <div class="about-info-cards">
+          <div class="info-card">
+            <span class="info-label">LOCATION</span>
+            <span class="info-value">USA</span>
+          </div>
+          <div class="info-card">
+            <span class="info-label">EMAIL</span>
+            <span class="info-value">srayashjeejula@gmail.com</span>
+          </div>
+          <div class="info-card">
+            <span class="info-label">PHONE</span>
+            <span class="info-value">+1 (315) 316-4477</span>
+          </div>
+          <div class="info-card">
+            <span class="info-label">EDUCATION</span>
+            <span class="info-value">M.S. Data Science</span>
+            <span class="info-sub">SUNY Polytechnic Institute</span>
+          </div>
+          <div class="info-card">
+            <span class="info-label">PREV. DEGREE</span>
+            <span class="info-value">B.E. Electrical & Electronics</span>
+            <span class="info-sub">Osmania University</span>
+          </div>
+          <div class="info-card highlight-card">
+            <span class="info-label">STATUS</span>
+            <span class="info-value"><span class="blink-dot"></span> Open to Work</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-index">02</span>
+        <h2 class="section-title">TECH STACK</h2>
+      </div>
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Dynamically rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-index">03</span>
+        <h2 class="section-title">EXPERIENCE</h2>
+      </div>
+      <div class="timeline" id="timeline">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-index">04</span>
+        <h2 class="section-title">PROJECTS</h2>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-index">05</span>
+        <h2 class="section-title">CONTACT</h2>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-left">
+          <p class="contact-lead">
+            Let's build something that processes a few million records.
+          </p>
+          <div class="contact-links">
+            <a href="tel:+13153164477" class="contact-link">
+              <span class="cl-icon">📞</span>
+              <span>+1 (315) 316-4477</span>
+            </a>
+            <a href="mailto:saisrayash@gmail.com" class="contact-link">
+              <span class="cl-icon">✉</span>
+              <span>saisrayash@gmail.com</span>
+            </a>
+            <a href="https://linkedin.com/in/saisrayashjeejula" target="_blank" class="contact-link">
+              <span class="cl-icon">in</span>
+              <span>LinkedIn Profile</span>
+            </a>
+            <a href="https://github.com/saisrayash" target="_blank" class="contact-link">
+              <span class="cl-icon">⌥</span>
+              <span>GitHub Profile</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label>NAME</label>
+              <input type="text" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label>EMAIL</label>
+              <input type="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label>MESSAGE</label>
+              <textarea placeholder="Tell me about the project..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary full-width">SEND MESSAGE</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">[SSJ] © 2025</span>
+      <span class="footer-tagline">Built with precision. Deployed with purpose.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
